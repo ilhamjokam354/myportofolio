@@ -1,0 +1,23 @@
+{
+    "name": "My Portofolio",
+    "short_name": "My Portofolio",
+    "description": "Portofolio By Ilham Imam Khoiri",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#0563bb",
+    "theme_color": "#0563bb",
+    "icons": [
+        {
+            "src": "./assets/img/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/img/192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+
+    ],
+    "gcm_sender_id" : "602520553422"
+}
