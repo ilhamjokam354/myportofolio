@@ -41,6 +41,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
+  float: left;
+  margin-right: 34cm;
 }
 
 .back-to-top i {
@@ -110,6 +112,9 @@ h1, h2, h3, h4, h5, h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  
+
+
 }
 
 /*--------------------------------------------------------------
@@ -1169,3 +1174,4 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+

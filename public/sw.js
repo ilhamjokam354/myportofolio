@@ -3,13 +3,15 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox
 if (workbox){
   console.log(`Workbox berhasil dimuat`);
   workbox.precaching.precacheAndRoute([
-      { url: './', revision: '1' },
-      { url: './manifest.json', revision: '1' },
-      { url: './index.html', revision: '1' },
-      { url: './portfolio-details-corona.html', revision: '1' },
-      { url: './portfolio-details-phising.html', revision: '1' },
-      { url: './portfolio-details-restaurant.html', revision: '1' },
-      { url: './portfolio-details-tokobuku.html', revision: '1' }
+      { url: './', revision: '2' },
+      { url: './manifest.json', revision: '2' },
+      { url: './index.html', revision: '2' },
+      { url: './portfolio-details-corona.html', revision: '2' },
+      { url: './portfolio-details-phising.html', revision: '2' },
+      { url: './portfolio-details-restaurant.html', revision: '2' },
+      { url: './portfolio-details-tokobuku.html', revision: '2' },
+      { url: './portfolio-details-mudamudi.html', revision: '2' },
+      { url: './portfolio-details-miqumimutuban.html', revision: '2' }
       ],
       {
         // Ignore all URL parameters.
@@ -30,10 +32,16 @@ if (workbox){
           }),
           ]
       })
+  );
+
+
+      // Caching Google Fonts
+    workbox.routing.registerRoute(
+      /.*(?:googleapis|gstatic)\.com/,
+      workbox.strategies.staleWhileRevalidate({
+        cacheName: 'google-fonts-stylesheets',
+    })
       );
-
-
-
 
     workbox.routing.registerRoute(
     /\.(?:js|css)$/,
@@ -64,7 +72,7 @@ self.addEventListener('push', function(event) {
       }
     };
     event.waitUntil(
-      self.registration.showNotification('Notifikasi Dari My Portofolio', options)
+      self.registration.showNotification('Notifikasi Dari My Portofolio - Ilham Imam Khoiri', options)
     );
   });
   
